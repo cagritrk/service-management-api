@@ -1,0 +1,18 @@
+spring:
+  config:
+    activate:
+      on-profile: prod
+  data:
+    mongodb:
+      host: ${MONGO_HOST}
+      port: ${MONGO_PORT}
+      username: ${MONGO_USERNAME}
+      password: ${MONGO_PASSWORD}
+      database: resourcemanager-demo
+      authentication-database: admin
+  cache:
+    type: simple
+    cache-names: services
+app:
+  config:
+    allowed-origins: https://frontenddomain.com

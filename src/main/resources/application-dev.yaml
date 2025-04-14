@@ -1,0 +1,24 @@
+spring:
+  config:
+    activate:
+      on-profile: dev
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      username: admin
+      password: p@ssword
+      database: resourcemanager-demo
+      authentication-database: admin
+  cache:
+    type: simple
+    cache-names: services
+logging:
+  level:
+    com.cagriturk.resourcemanager: DEBUG
+    org.springframework.cache: TRACE
+    org.springframework.data.mongodb.core: DEBUG
+    org.springframework.web: DEBUG
+app:
+  config:
+    allowed-origins: http://localhost:4200
