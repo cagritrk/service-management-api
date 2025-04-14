@@ -1,15 +1,23 @@
 package com.cagriturk.servicemanager.service;
 
 import com.cagriturk.servicemanager.dto.ServiceDto;
+import com.cagriturk.servicemanager.dto.ServiceSummaryDto;
 import com.cagriturk.servicemanager.exception.NotFoundException;
 
+import java.util.List;
 import java.util.Optional;
 
 /**
  * Service interface for managing services.
- * Provides methods for CRUD operations
+ * Provides methods for CRUD operations and retrieving service summaries.
  */
 public interface ServiceService {
+
+    /**
+     * Retrieves a list of summaries for all services.
+     * @return a list of service summaries
+     */
+    List<ServiceSummaryDto> findAllServiceSummaries();
 
     /**
      * Retrieves a service by its ID.
