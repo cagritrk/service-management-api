@@ -7,7 +7,8 @@ import org.springframework.stereotype.Repository;
 /**
  * Repository interface for Service entities.
  * Extends MongoRepository to provide CRUD operations for Service documents.
+ * Also includes custom repository functionality through ServiceRepositoryCustom.
  */
 @Repository
-public interface ServiceRepository extends MongoRepository<Service, String> {
+public interface ServiceRepository extends MongoRepository<Service, String>, ServiceRepositoryCustom {
 }
